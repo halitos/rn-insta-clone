@@ -26,8 +26,9 @@ const Register = () => {
           name,
           email,
           createdAt: new Date(),
+          userId: user.uid,
         });
-        console.log('DOCREF', docRef);
+        console.log('New User added to DB', docRef);
       })
       .catch((error) => {
         const errorCode = error.code;
